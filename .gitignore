@@ -1,0 +1,7 @@
+node_modules/
+build/
+*.db
+*.db-shm
+*.db-wal
+.env
+*.js.map

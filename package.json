@@ -1,0 +1,45 @@
+{
+  "name": "gemini-cli-obs",
+  "version": "1.0.0",
+  "description": "MLOps-grade observability MCP server for Gemini CLI — tracks tool latency, token usage, cost-per-session, and surfaces P95 regressions across agent runs",
+  "type": "module",
+  "bin": {
+    "gemini-cli-obs": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests"
+  },
+  "files": [
+    "build",
+    "README.md",
+    ".gemini"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2",
+    "better-sqlite3": "^11.10.0",
+    "nanoid": "^5.1.5",
+    "zod": "^3.25.28"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.13.14",
+    "typescript": "^5.8.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "gemini-cli",
+    "mcp",
+    "observability",
+    "mlops",
+    "latency",
+    "cost-tracking",
+    "ai-agent"
+  ],
+  "license": "Apache-2.0"
+}
