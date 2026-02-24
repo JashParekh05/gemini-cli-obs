@@ -1,0 +1,15 @@
+{
+  "_comment": "Add the mcpServers block to your ~/.gemini/settings.json",
+  "mcpServers": {
+    "obs": {
+      "command": "node",
+      "args": ["REPLACE_WITH_ABSOLUTE_PATH/gemini-cli-obs/build/index.js"],
+      "env": {
+        "OBS_DB_PATH": "$HOME/.gemini/obs.db",
+        "LOG_LEVEL": "warn"
+      },
+      "timeout": 30000,
+      "trust": false
+    }
+  }
+}
